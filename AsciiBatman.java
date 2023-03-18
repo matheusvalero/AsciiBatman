@@ -111,38 +111,41 @@ public class AsciiBatman {
     }
     static void quintaForma(){
         System.out.println();
-        ArrayList<ArrayList<Integer>> cadaAdicao = new ArrayList<>(
-                Arrays.asList(
-                        new ArrayList<>(Arrays.asList(6, 6, 3, 5, 7, 9, 6, 5, 4, 5)),
-                        new ArrayList<>(Arrays.asList(4, 6, 2, 8, 7, 9, 7, 6, 4, 5)),
-                        new ArrayList<>(Arrays.asList(3, 4, 3, 10, 7, 9, 7, 9, 3, 5)),
-                        new ArrayList<>(Arrays.asList(2, 4, 2, 14, 4, 11, 5, 12, 3, 4)),
-                        new ArrayList<>(Arrays.asList(1, 4, 2, 49, 2, 4)),
-                        new ArrayList<>(Arrays.asList(1, 4, 2, 51, 2, 4)),
-                        new ArrayList<>(Arrays.asList(1, 4, 2, 52, 2, 4)),
-                        new ArrayList<>(Arrays.asList(1, 4, 2, 51, 2, 4)),
-                        new ArrayList<>(Arrays.asList(1, 4, 2, 51, 2, 4)),
-                        new ArrayList<>(Arrays.asList(2, 4, 2, 7, 5, 4, 2, 11, 2, 4, 5, 9, 2, 4)),
-                        new ArrayList<>(Arrays.asList(3, 4, 3, 5, 6, 1, 6, 7, 6, 1, 6, 8, 2, 4)),
-                        new ArrayList<>(Arrays.asList(4, 5, 3, 4, 13, 5, 13, 6, 3, 5)),
-                        new ArrayList<>(Arrays.asList(6, 5, 3, 2, 14, 3, 14, 2, 4, 6)),
-                        new ArrayList<>(Arrays.asList(7, 6, 3, 1, 14, 1, 14, 1, 3, 7)),
-                        new ArrayList<>(Arrays.asList(9, 7, 32, 7)),
-                        new ArrayList<>(Arrays.asList(12, 8, 25, 7))
-                )
-        );
-        ArrayList<Integer> vezes = new ArrayList<>(Arrays.asList(10, 10, 10, 10, 6, 5, 5, 5, 6, 14, 14, 10, 10, 10, 4, 4));
-        for (int i = 1; i <= 16; i++){
-            for (int x = 0; x <= vezes.get(x); x++){
-                for (int t = 0; t <= cadaAdicao.get(t).get(t); t++){
-                    if (t == 0 || t % 2 == 0) {
-                        System.out.print(" ");
-                    } else {
-                        System.out.print("*");
-                    }
+        List<List<Integer>> listas = new ArrayList<List<Integer>>();
+        listas.add(List.of(20, 24));
+        listas.add(List.of(15, 34));
+        listas.add(List.of(11, 7, 3, 1, 5, 1, 7, 1, 4, 1, 4, 7));
+        listas.add(List.of(8, 7, 3, 3, 6, 2, 5, 2, 5, 3, 3, 7));
+        listas.add(List.of(6, 6, 3, 5, 7, 9, 6, 5, 4, 5));
+        listas.add(List.of(4, 6, 2, 8, 7, 9, 7, 6, 4, 5));
+        listas.add(List.of(3, 4, 3, 10, 7, 9, 7, 9, 3, 5));
+        listas.add(List.of(2, 4, 2, 14, 4, 11, 5, 12, 3, 4));
+        listas.add(List.of(1, 4, 2, 49, 2, 4));
+        listas.add(List.of(1, 3, 2, 51, 2, 4));
+        listas.add(List.of(1, 3, 2, 52, 2, 4));
+        listas.add(List.of(1, 3, 2, 51, 3, 4));
+        listas.add(List.of(1, 4, 2, 51, 2, 4));
+        listas.add(List.of(2, 4, 2, 7, 5, 4, 2, 11, 2, 4, 5, 9, 2, 4));
+        listas.add(List.of(3, 4, 3, 5, 6, 1, 6, 7, 6, 1, 6, 8, 2, 4));
+        listas.add(List.of(4, 5, 3, 4, 13, 5, 13, 6, 3, 5));
+        listas.add(List.of(6, 5, 3, 2, 14, 3, 14, 2, 4, 6));
+        listas.add(List.of(7, 6, 3, 1, 14, 1, 14, 1, 3, 7));
+        listas.add(List.of(9, 7, 32, 7));
+        listas.add(List.of(12, 8, 25, 7));
+        listas.add(List.of(15, 34));
+        listas.add(List.of(20, 24));
+
+        for (List<Integer> lista : listas) {
+            int y = 0;
+            while (y < lista.size()) {
+                if (y == 0 || y % 2 == 0) {
+                    System.out.print(" ".repeat(lista.get(y)));
+                } else {
+                    System.out.print("*".repeat(lista.get(y)));
                 }
-                System.out.println();
+                y++;
             }
+            System.out.println("");
         }
     }
 
