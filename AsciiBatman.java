@@ -17,6 +17,16 @@ public class AsciiBatman {
             }
             System.out.println();
         }
+        int inicio = 5;
+        for (int i = 0; i < inicio; i++) {
+            for (int v = 0; v < i; v++) {
+                System.out.print(" ");
+            }
+            for (int z = 0; z < (inicio-i)*2-1; z++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
         linhaSimples();
         segundaLinhaSimples();
         terceiraLinha();
@@ -108,6 +118,7 @@ public class AsciiBatman {
                 }
             }
         }
+        System.out.println("\n");
     }
     static void quintaForma(){
         System.out.println();
@@ -148,5 +159,4 @@ public class AsciiBatman {
             System.out.println("");
         }
     }
-
 }

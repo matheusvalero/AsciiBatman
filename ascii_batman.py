@@ -1,4 +1,52 @@
-#ascii
+with open("bat.txt", "r") as arquivo:
+    arquivo.read
+    for linha in arquivo:
+        contagemCaractere = 0
+        contagemEspaco = 0
+
+        index = 0
+        for caractere in linha:
+            print(caractere, end="")
+print("\n")
+
+strimgg = "1234567890"
+print(strimgg[-1:])
+
+lista = []
+listona = []
+
+with open("bat.txt", "r") as arquivo:
+    arquivo.read
+    for linha in arquivo:
+        contagemCaractere = 0
+        contagemEspaco = 0
+
+        index = 0
+        for caractere in linha:
+            try:
+                if (caractere == " "):
+                    contagemEspaco += 1
+                    if (index+1 == len(linha)-1):
+                        lista.append(contagemEspaco)
+                        break
+                    elif (linha[index+1] == "*"):
+                        lista.append(contagemEspaco)
+                        contagemEspaco = 0
+                else:
+                    contagemCaractere += 1
+                    if (index+1 == len(linha)-1):
+                        lista.append(contagemCaractere)
+                        break
+                    elif (linha[index+1] == " "):
+                        lista.append(contagemCaractere)
+                        contagemCaractere = 0
+                        
+                index += 1
+            except (IndexError):
+                break
+
+print(lista, "\n")
+
 
 listas = [[20, 24],
           [15, 34],
